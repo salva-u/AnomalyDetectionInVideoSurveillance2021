@@ -1,2 +1,2 @@
-# AnomalyDetectioninVideoSurveillance2021
+# AnomalyDetectionInVideoSurveillance2021
  
