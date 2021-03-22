@@ -18,7 +18,7 @@ The model was able to achieve a 83.4% accuracy and  a low false alarm rate of 1.
 
 ### Prerequisites
 This model was trained using CUDA 10.0 and GeForce RTX 2080 Ti GPU
-config==0.5.0.post0\\
+```config==0.5.0.post0\\
 configparser==4.0.2\\
 ffmpeg==1.4\\
 h5py==2.10.0\\
@@ -48,7 +48,7 @@ tensorboard==1.14.0\\
 tensorflow==1.14.0\\
 tensorflow-estimator==1.14.0\\
 termcolor==1.1.0\\
-Theano==1.0.4\\
+Theano==1.0.4\\```
 
 ## Baseline Work
 
