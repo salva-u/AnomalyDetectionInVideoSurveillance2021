@@ -2,6 +2,7 @@
 This Project aims at detecting anomalous events in Video Surveillance Footage. 
 
 Brief Overview of thesis:
+
 Used the R(2+1)D feature extraction model to extract spatial and temporal feature from the UCF-Crime Dataset. 
 Further, the features were fed to a weakly supervised MIL Model to produce anomaly scores for the CCTV data. 
 The model was able to achieve a 83.4% accuracy and  a low false alarm rate of 1.0
