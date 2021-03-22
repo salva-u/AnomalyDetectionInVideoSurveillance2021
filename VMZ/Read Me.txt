@@ -1,0 +1,2 @@
+Use the following file for feature extraction: 
+r2plus1d_152_ft_kinetics_from_sports1m_f128957437.pkl

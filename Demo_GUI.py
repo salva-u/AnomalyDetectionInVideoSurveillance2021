@@ -1,3 +1,4 @@
+#has been edited to run using newer libraries by Salva Umar, originally obtained by https://github.com/WaqasSultani/AnomalyDetectionCVPR2018
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.regularizers import l2
@@ -99,7 +100,7 @@ def savitzky_golay(y, window_size, order, deriv=0, rate=1):
 """ Taken from other repository"""
 def classifier_model():
     model = Sequential()
-    model.add(Dense(512, input_dim=4096, kernel_initializer='glorot_normal', kernel_regularizer=l2(0.001), activation='relu'))
+    model.add(Dense(512, input_dim=2048, kernel_initializer='glorot_normal', kernel_regularizer=l2(0.001), activation='relu'))
     model.add(Dropout(0.6))
     model.add(Dense(32, kernel_initializer='glorot_normal', kernel_regularizer=l2(0.001)))
     model.add(Dropout(0.6))
@@ -153,14 +154,14 @@ def load_dataset_One_Video_Features(Test_Video_Path):
     VideoPath =Test_Video_Path
     f = open(VideoPath, "r")
     words = f.read().split()
-    num_feat = len(words) / 4096 # we will get 32 so the len of words is 131072
+    num_feat = len(words) / 2048 # we will get 32 so the len of words is 131072
     # Number of features per video to be loaded. In our case num_feat=32, as we divide the video into 32 segments. Npte that
     # we have already computed C3D features for the whole video and divide the video features into 32 segments.
 
     count = -1;
     VideoFeatues = []
     for feat in range(0, int(num_feat)):
-        feat_row1 = np.float32(words[feat * 4096:feat * 4096 + 4096])
+        feat_row1 = np.float32(words[feat * 2048:feat * 2048 + 2048])
         count = count + 1
         if count == 0:
             VideoFeatues = feat_row1
@@ -221,7 +222,7 @@ class PrettyWidget(QtWidgets.QWidget):
         FeaturePath = './Dataset/TrainingFeatures/AnomalyFeatures/Fighting002_x264'
         FeaturePath = FeaturePath+ '.txt'
         inputs = load_dataset_One_Video_Features(FeaturePath)
-        #inputs = np.reshape(inputs, (32, 4096))
+        #inputs = np.reshape(inputs, (32, 2048))
         predictions = model.predict_on_batch(inputs)
 
         Frames_Score = []

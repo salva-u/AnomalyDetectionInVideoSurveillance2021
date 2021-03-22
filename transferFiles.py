@@ -1,26 +1,31 @@
-#This code is used to split the extracted features into their respective diretories for training/testing purposes.
-
+"""
+Use this file to move the dataset videos into their respective train and test split folders.
+"""
 import shutil 
 import os 
 import sys
 from os import listdir
-fromm = './Dataset/'
-to = './Dataset/TrainingVMZFeatures/AnomalyFeatures/'
+fromm = './Dataset/' #the sub directory where all the dataset 
+to = './Dataset/TrainingFeatures/AnomalyFeatures/'
 f = open('./Anomaly_Detection_splits/Anomaly_Train.txt', 'r')
 list = f.read().split('\n')
 f.close()
 list = list[:-1] # remove ending empty line 
 
-
+#this file is used to move the features extracted in pickle form into their
+#respective sub folders
 for i in range(len(list)):
 	name = list[i].rsplit('/')
-	folder = name[0]+'VMZFeatures/'
+	folder = name[0]+'Features/'
 	folder = fromm+folder
 	name = name[1]
 	name = name[:-4]
 	name = name + '.txt'
 	shutil.move(folder+name, to+name)
 	print("Moved: ", name)
+
+#The code below is used to compare the two extracted features sub directories and make sure
+#For all the videos
 """
 AllTest_Video_Path = './Dataset/TrainingFeatures/AnomalyFeatures/'
 path = './Dataset/'
@@ -39,3 +44,4 @@ for i in range(l):
 		print('Missing File is: \n')
 		print(real)
 """
+

@@ -1,0 +1,117 @@
+Mon Mar  9 17:45:27 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 435.21       Driver Version: 435.21       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  Off  | 00000000:0B:00.0 Off |                  N/A |
+|  0%   46C    P8    17W / 300W |      1MiB / 11019MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  GeForce RTX 208...  Off  | 00000000:41:00.0  On |                  N/A |
+|  0%   53C    P8    30W / 300W |    400MiB / 11016MiB |      1%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    1      3307      G   /usr/lib/xorg/Xorg                            18MiB |
+|    1      3451      G   /usr/bin/gnome-shell                          58MiB |
+|    1      4136      G   /usr/lib/xorg/Xorg                            89MiB |
+|    1      4300      G   /opt/teamviewer/tv_bin/TeamViewer             18MiB |
+|    1      4310      G   /usr/bin/gnome-shell                         214MiB |
++-----------------------------------------------------------------------------+
+GeForce RTX 2080 Ti
+
+sudo apt-get install libnvinfer6  libnvonnxparsers6  libnvparsers6  libnvinfer-plugin6  libnvinfer-dev  libnvonnxparsers-dev libnvparsers-dev  libnvinfer-plugin-dev python-libnvinfer python3-libnvinfer  
+sudo apt-mark unhold libnvinfer6 libnvonnxparsers6 libnvparsers6 libnvinfer-plugin6 libnvinfer-dev libnvonnxparsers-dev libnvparsers-dev libnvinfer-plugin-dev python-libnvinfer python3-libnvinfer
+
+
+
+
+# -------------------------------------------------------------------------------
+export CUDAHOSTCXX='/usr/bin/gcc-5'
+ export PATH=/usr/local/cuda-10.0/bin:$PATH
+ 
+ 24704
+ ra: 14705
+ robb: 25958
+ shooting: 4468
+ shoplifting: 15532
+ stealing: 28019 
+ vandalism: 8525
+ testing: 69634
+ testp1: 13192 1-50 vids
+ testp2: 7952 51-100
+ testp3: 10060 101-149
+ testp4: 21232 150-200
+ testp5.csv 7420 201-250?
+ testp6: 9638 251-290?
+ done all expect the one test file mentioned below 
+ 
+ #----------------------
+ train 1: 29515 1-100 (did 0:100 so ran on 0-99)-DONE
+ train2: 50228, 100-200 (did 100:200 so next 100)
+ train3: 12704 200-258 (did the next 58 videos until X297)
+ train4: x 267 and 268 -- left out for now because 
+ train4n5: 18756 258:310 50 videos without 307 and 308
+ train6: 48818  310-400 videos:355-449  
+ train7: 44061 400-430 44060
+ #--------
+ train2p1: 95572 (0:70) - 70 videos till 522
+ train2p2: 75691 (70:150) -80 videos 75690
+ train2p3: 31410 (150:200)- 50 vids
+ train2p4: 23198 (200:250) - 50 videos
+ train2p5:  20716 (250:310) - 60 vids 
+ train2p6: 41564 (310:370) - 60 vids 
+#----------------------
+extract for test features 317 normal videos seperately in the end
+
+
+############################################################################################################################################################################
+
+config==0.5.0.post0\\
+configparser==4.0.2\\
+ffmpeg==1.4\\
+h5py==2.10.0\\
+imageio==2.6.1\\
+Keras==2.3.1\\
+Keras-Applications==1.0.8\\
+Keras-Preprocessing==1.1.0\\
+matplotlib==3.1.2\\
+numpy==1.18.2\\
+opencv-python==4.2.0.32\\
+Pillow==5.1.0\\
+PyOpenGL==3.1.0\\
+PyQt5==5.13.1\\
+PyQt5-sip==12.7.0\\
+pyRFC3339==1.0\\
+pytest==3.3.2\\
+python-apt==1.6.5+ubuntu0.2\\
+python-dateutil==2.8.1\\
+python-debian==0.1.32\\
+PyYAML==5.3\\
+reportlab==3.4.0\\
+scikit-image==0.16.2\\
+scikit-learn==0.22.2.post1\\
+scipy==1.4.1\\
+sklearn==0.0\\
+tensorboard==1.14.0\\
+tensorflow==1.14.0\\
+tensorflow-estimator==1.14.0\\
+termcolor==1.1.0\\
+Theano==1.0.4\\
+
+
+Notes on how to start working:
+
+adapt resreach paper to template 
+keywords: modify absract accordingly 
+summarize stuff to make it better 
+follow format of other papers that are already in the journal 
+figures 
+how many test cases; okay experiments 
+
+Find similar papers and find the pattern:
+- send the journal

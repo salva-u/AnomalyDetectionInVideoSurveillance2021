@@ -6,7 +6,7 @@ close all
 ROC_PathAL='./Paper_Results';
 All_files=dir([ROC_PathAL,'/*.mat']);
 %All_files=All_files(3:end);
-Colors={'b','c','k','r','y', 'm'};
+Colors={'b','c','k','r','y'};
 
 AUC_All=[];
 k = 0;
@@ -25,7 +25,7 @@ end
 % [ 9 9 0; 0 9 9; 9 0 9] 3x3 matrix
 AUC_All*100
 
-legend({'Binary classifier','Lu et al.','Hassan et al.','Model''s result','Trained on Paper''Default', 'Our Own Method'},'FontSize',16,'Location','southeast');
+legend({'Binary classifier','Lu et al.','Hassan et al.','Model''s result','Own Trained Result'},'FontSize',16,'Location','southeast');
 xlabel('False Positive Rate','FontWeight','normal','FontSize',18);
 ylabel('True Positive Rate','FontWeight','normal','FontSize',18);
 set(gca,'FontWeight','normal','FontSize',12);
