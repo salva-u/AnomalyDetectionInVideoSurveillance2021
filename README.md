@@ -48,8 +48,8 @@ tensorboard==1.14.0\\
 tensorflow==1.14.0\\
 tensorflow-estimator==1.14.0\\
 termcolor==1.1.0\\
-Theano==1.0.4\\```
-
+Theano==1.0.4\\
+```
 ## Baseline Work
 
 * [Baseline Paper and Work]( https://www.crcv.ucf.edu/projects/real-world/) - Baseline Conference Paper
